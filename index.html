@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/navbar_footer.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<script src="script.js" defer></script>
+	<script src="https://kit.fontawesome.com/16688ca513.js" crossorigin="anonymous"></script>
+	
+	<title>Portfolio</title>
+</head>
+
+<!-- Navbar -->
+<nav>
+	<a href="/index.html" class="block logo"><span>TIANZHENG LI</span></a>
+	<ul class="block nav-links">
+		<li><div class="link-box"><a href="index.html">HOME</a></li></div>
+		<li><div class="link-box"><a href="gallery.html">GALLERY</a></li></div>
+		<li><div class="link-box"><a href="aboutme.html">ABOUT ME</a></li></div>
+		<li><div class="link-box"><a href="contact.html">CONTACT</a></li></div>
+		<li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+	</ul>
+	<div class="block burger">
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+	</div>
+</nav>
+
+<body>
+	<div class="content">
+		<div class="title">
+			<h1><span>PORTFOLIO</span> FOR</h1>
+			<h2>ART & <span>ILLUSTRATION</span></h2>
+		</div>	
+		
+		<div class="home">
+			<div class="box">
+				<i class="fa-solid fa-pen-nib"></i>
+				<hr class="small_hr">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maiores quaerat voluptatibus a in architecto, illo, excepturi dolorem unde consectetur autem ullam asperiores earum perspiciatis tempore eaque? Explicabo, laborum quo!</p>
+				<hr class="big_hr">
+				<button>GALLERY</button>
+			</div>
+			
+			<img src="images/home.png" alt="">
+		</div>
+		
+		<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+				<li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+				<li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+			</ol>
+			
+			<div class="carousel-inner">
+				<!-- Item 1 -->
+				<div class="carousel-item active" style="background-image:url(./images/carousel1.PNG)">
+					<div class="container">
+						<h1>ILLUSTRATION</h1>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas porro consequatur ratione temporibus omnis, aliquam ullam id obcaecati architecto eos aperiam libero neque placeat, maiores aspernatur quibusdam nostrum pariatur dolore!</p>
+						<a href="#" class="btn btn-lg btn-primary">See more</a>
+					</div>
+				</div>
+				<!-- Item 2 -->
+				<div class="carousel-item item-2" style="background-image:url(./images/carousel2.PNG)">
+					<div class="container">
+						<h1>CHARACTER DESIGN</h1>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas porro consequatur ratione temporibus omnis, aliquam ullam id obcaecati architecto eos aperiam libero neque placeat, maiores aspernatur quibusdam nostrum pariatur dolore!</p>
+						<a href="#" class="btn btn-lg btn-primary">See more</a>
+					</div>
+				</div>
+				<!-- Item 2 -->
+				<div class="carousel-item">
+					<div class="container">
+						<h1>BACKGROUNDS</h1>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas porro consequatur ratione temporibus omnis, aliquam ullam id obcaecati architecto eos aperiam libero neque placeat, maiores aspernatur quibusdam nostrum pariatur dolore!</p>
+						<a href="#" class="btn btn-lg btn-primary">See more</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Previous button-->
+			<a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+				<span class="sr-only">Previous</span>
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<!-- <i class="fa-solid fa-caret-left"></i> -->
+			</a>
+			<!-- Next button-->
+			<a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+				<span class="sr-only">Next</span>
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<!-- <i class="fa-solid fa-caret-right"></i> -->
+			</a>
+			
+		</div>
+	</div>
+	
+</body>
+
+<!-- Footer -->
+<footer>
+	<div class="footer-main">
+		<i class="fa-solid fa-house-user"></i>
+		<a href="#">HOME</a>
+		<div class="separator"></div>
+		<i class="fa-solid fa-envelope"></i>
+		<a href="#">CONTACT</a>
+		<div class="separator"></div>
+		<i class="fa-solid fa-share-nodes"></i>
+		<a href="#">SOCIALS</a>
+		<div class="separator"></div>
+		<div class="copyright">
+			<p>Copyright © 2022 Art of Tianzheng Li. All rights reserved. Website designed and art created by Tianzheng Li.</p>
+			<p></p>
+		</div>
+	</div>
+</footer>
+</html>
