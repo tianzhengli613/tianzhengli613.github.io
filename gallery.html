@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>About me</title>
+	<title>Gallery</title>
 	<link rel="stylesheet" type="text/css" href="css/links.css">
 	<link rel="stylesheet" type="text/css" href="css/navbar_footer.css">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
 	<script src="script.js" defer></script>
 	<script src="https://kit.fontawesome.com/16688ca513.js" crossorigin="anonymous"></script>
 </head>
@@ -31,6 +32,29 @@
 <body>
 	<div class="content">
 		<h1>Gallery</h1>
+		<input type="radio" name="Photos" id="check1" checked>
+		<label for="check1">All Photos</label>
+		<input type="radio" name="Photos" id="check2">
+		<label for="check2">Personal</label>
+		<input type="radio" name="Photos" id="check3">
+		<label for="check3">Illustrations</label>
+		<input type="radio" name="Photos" id="check4">
+		<label for="check4">?</label>
+		
+		<div class="images">
+			<img src="images/art1.PNG" class="personal" alt="">
+			<img src="images/art2.PNG" class="personal" alt="">
+			<img src="images/art3.PNG" class="personal" alt="">
+			
+			<img src="images/carousel1.PNG" class="illustrations" alt="">
+			<img src="images/carousel2.PNG" class="illustrations" alt="">
+		</div>
+		
+		<div class="popup">
+			<span>&times;</span>
+			<img src="images/art1.PNG" class="personal" alt="">
+		</div>
+		
 	</div>
 </body>
 
@@ -53,3 +77,18 @@
 	</div>
 </footer>
 </html>
+
+<script>
+	document.querySelector('.popup').style.display = 'none';
+	
+	document.querySelectorAll('.images img').forEach(image => {
+		image.onclick = () => {
+			document.querySelector('.popup').style.display = 'block';
+			document.querySelector('.popup img').src = image.getAttribute('src');
+		}
+	});
+
+	document.querySelector('.popup span').onclick = () => {
+		document.querySelector('.popup').style.display = 'none';
+	}
+</script>
