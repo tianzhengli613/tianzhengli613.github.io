@@ -1,45 +1,50 @@
+h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-decoration: underline;
+	margin: 0.5rem 0.5rem;
+}
+
 input {
 	display: none;
 }
 
-label {
-	display: inline-flex;
-	align-items: center;
+.categories {
+	display: flex;
 	justify-content: center;
 	background-color: black;
-	color: white;
-	width: 9rem; height: 2.5rem;
+	padding: 0.5rem 0;
 	border-style: solid;
 	border-color: white;
-}
-
-/* .radio {
-	display: flex;
+	border-width: 2px;
+	border-left: none;
+	border-right: none;
 }
 
 label {
+	font-family: 'Times New Roman', Times, serif;
+	display: flex;
 	background-color: black;
-	min-width: 8rem;
 	color: white;
+	font-weight: bold;
+	width: 9rem; height: 2.5rem;
+	align-items: center;
+	justify-content: center;
 	border-style: solid;
 	border-color: white;
-	border-width: 3px;
-	border-radius: 4px;
-	padding: 8px 8px;
-	text-align: center;
-	font-weight: bold;
-} */
-
-.images img {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	cursor: pointer
+	margin: 2px;
+	user-select: none;
 }
 
 .images {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 1rem;
+}
+
+.images img {
+	aspect-ratio: 1;
+	object-fit: cover;
+	cursor: pointer;
 }
 
 .popup {
@@ -64,8 +69,46 @@ label {
 	position: absolute;
 	top: 50%; left: 50%;
 	transform: translate(-50%, -50%);
-	width: 750px;
-	object-fit: cover;
+	width: 80vw;
+	max-width: 800px;
+	max-height: 800px;
+	object-fit: scale-down;
+}
+
+@media (max-width: 600px) {
+	.images {
+		display: flex;
+		border-collapse: collapse;
+		flex-wrap: wrap;
+	}
+
+	.images img {
+		width: 50%;
+	}
+	
+	.categories {
+		display: flex;
+	}
+	
+	.categories label {
+		width: 25%;
+	}
+	
+	.popup img {
+		width: 100%;
+	}
+}
+
+@media (min-width: 600px) {
+	.images img {
+		width: calc(100% / 3);
+	}
+}
+
+@media (min-width: 900px) {
+	.images img {
+		width: 25%;
+	}
 }
 
 label:hover {
@@ -74,8 +117,21 @@ label:hover {
 	cursor: pointer;
 }
 
-input[type="radio"]:checked+label {
+#check1:checked~#labels .c1,
+#check2:checked~#labels .c2,
+#check3:checked~#labels .c3,
+#check4:checked~#labels .c4 {
 	color: red;
+	border-color: red;
+}
+
+#check1:checked~#labels .c1:hover,
+#check2:checked~#labels .c2:hover,
+#check3:checked~#labels .c3:hover,
+#check4:checked~#labels .c4:hover {
+	background-color: red;
+	color: black;
+	cursor: pointer;
 }
 
 #check1:checked ~ .images img {
@@ -107,6 +163,13 @@ input[type="radio"]:checked+label {
 }
 
 #check3:checked ~ .images .personal {
+	opacity: 0;
+	transform: scale(0);
+	position: absolute;
+	transition: 0.5s;
+}
+
+#check4:checked ~ .images img {
 	opacity: 0;
 	transform: scale(0);
 	position: absolute;
