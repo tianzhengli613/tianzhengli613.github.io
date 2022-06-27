@@ -1,3 +1,18 @@
+h1 {
+	font-family: 'Times New Roman', Times, serif;
+	text-decoration: underline;
+	margin: 0.5rem;
+}
+
 .content i {
 	color: white;
+}
+
+.email, .twitter, .artstation {
+	display: flex;
+	margin: 0.5rem;
+}
+
+.email p, .twitter p, .artstation p {
+	margin-left: 0.5rem;
 }
