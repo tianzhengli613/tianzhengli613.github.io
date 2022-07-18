@@ -1,18 +1,30 @@
-h1 {
+h1, h2 {
 	font-family: 'Times New Roman', Times, serif;
+	color: white;
 	text-decoration: underline;
 	margin: 0.5rem;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
 }
 
 .content i {
 	color: white;
 }
 
-.email, .twitter, .artstation {
+.socials_section {
 	display: flex;
 	margin: 0.5rem;
 }
 
-.email p, .twitter p, .artstation p {
+.socials_section a {
+	font-family: 'Times New Roman', Times, serif;
+	color: white;
+	text-decoration: none;
 	margin-left: 0.5rem;
 }
