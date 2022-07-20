@@ -141,35 +141,45 @@ label:hover {
 	transition: 0.5s;
 }
 
-#check2:checked ~ .images .personal {
-	transform: scale(1);
-	opacity: 1;
-	position: relative;
-	transition: 0.5s;
-}
-
 #check2:checked ~ .images .illustrations {
-	opacity: 0;
-	transform: scale(0);
-	position: absolute;
-	transition: 0.5s;
-}
-
-#check3:checked ~ .images .illustrations {
 	transform: scale(1);
 	opacity: 1;
 	position: relative;
 	transition: 0.5s;
 }
 
-#check3:checked ~ .images .personal {
+#check2:checked ~ .images .characters,
+#check2:checked ~ .images .portraits {
 	opacity: 0;
 	transform: scale(0);
 	position: absolute;
 	transition: 0.5s;
 }
 
-#check4:checked ~ .images img {
+#check3:checked ~ .images .characters {
+	transform: scale(1);
+	opacity: 1;
+	position: relative;
+	transition: 0.5s;
+}
+
+#check3:checked ~ .images .illustrations,
+#check3:checked ~ .images .portraits {
+	opacity: 0;
+	transform: scale(0);
+	position: absolute;
+	transition: 0.5s;
+}
+
+#check4:checked ~ .images .portraits {
+	transform: scale(1);
+	opacity: 1;
+	position: relative;
+	transition: 0.5s;
+}
+
+#check4:checked ~ .images .illustrations,
+#check4:checked ~ .images .characters {
 	opacity: 0;
 	transform: scale(0);
 	position: absolute;
